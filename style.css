@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+body {
+  background-color: #57bc90;
+}
+
+/* Header Section   */
+.header-section {
+  background-color: whitesmoke;
+}
+
+/* Logo font    */
+.logo {
+  font-family: "Rock Salt", cursive;
+}

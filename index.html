@@ -4,75 +4,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Country Details</title>
+    <title>BooksHub</title>
+    <!-- Bootstrap Link  -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <!-- Custom CSS Link  -->
+    <link rel="stylesheet" href="style.css">
 
   </head>
   <body>
-    <section class="container my-2">
-     <!-- Search input box   -->
-      <div class="d-flex">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Search Book Name"
-          id="searchInput"
-        />
-        <button class="btn btn-dark" id="search-btn">Search</button>
-      </div>
-    </section>
-    <section class="container">
-      <!-- Book Details -->
-      <div class="row" id="book-details">
-        <img class="w-50" src="https://restcountries.eu/data/umi.svg" alt="">
-        <p>Book title</p>
-        <p>Author Name</p>
-        <p>Publication Date :</p>
-        <p>Publisher Name : </p>
+    <!-- Navbar Section   -->
+    <header class= "header-section ">
+      <nav class="navbar navbar-light container ">
+        <a class="navbar-brand logo" href="#">BooksHub</a>
+      </nav>
+    </header>
 
-      </div>
-      <hr />
-    </section>
 
-    <div id="books">
+    <main>
+      <section class="container my-2">
         
-    </div>
-
-
-
-    <section class="container mt-2">
-        <div id="country-container" class="row"> 
-              <div class="col-md-3">
-        
-          <!-- <div class="rounded overflow-hidden border p-2">
-            <img
-              src="https://restcountries.eu/data/umi.svg"
-              class="w-100"
-              alt=""
-            />
-          </div>
-          
-          <div
-            class="
-              py-2
-              d-flex
-              justify-content-between
-              align-items-center
-              d-md-block
-              text-md-center
-            "
-          >
-            <h1>Bangladesh</h1>
-            <button class="btn btn-dark">Learn More</button>
-          </div> -->
-        </div> 
-        
-   </section>
+        <!-- Search input box   -->
+         <div class="d-flex">
+           <input
+             type="text"
+             class="form-control"
+             placeholder="Search Book Name"
+             id="searchInput"
+           />
+           <button class="btn btn-dark" id="search-btn">Search</button>
+         </div>
+       </section>
+       
+       <!-- Total Search Results  -->
+       <section>
+         <div id="search-total" class=" text-light text-center font-weight-bold container bg-success p-2 d-none rounded">
+   
+         </div>
+       </section>
+       
+       <!-- Books Details  -->
+       <section class="container mt-2">
+         
+           <div id="country-container" class="row"> 
+                 <div class="col-md-3">
+         
+           </div> 
+         
+      </section>
+    </main>
    <script src="app.js"></script>
   </body>
 </html>
