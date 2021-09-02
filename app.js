@@ -1,4 +1,4 @@
-const searchInput = document.getElementById("searchInput") ;
+let searchInput = document.getElementById("searchInput") ;
 const searchBtn = document.getElementById("search-btn");
 const container = document.getElementById("country-container");
 
@@ -6,7 +6,7 @@ const container = document.getElementById("country-container");
 
 searchBtn.addEventListener("click", () => {
     const search =  searchInput.value;
- 
+    searchInput.value = '';
     container.innerHTML= '';
     
     // Api Url 
@@ -14,6 +14,7 @@ searchBtn.addEventListener("click", () => {
     fetch(url)
     .then(res => res.json())
     .then(data => displayBooks(data));
+   
     
  
 });
@@ -59,7 +60,7 @@ const displayBooks = books => {
             <div class="card-body">
                 <h5 class="card-title">${book.text[1]}</h5>
                 <p class="card-text">Author Name : ${book.author_name}</p>
-                <p class="card-text">Publisher Name : ${book.publisher}</p>
+                <p class="card-text">Publisher Name : ${book.publisher.slice(0,1)}</p>
                 <p class="card-text">Publish Date : ${book.first_publish_year}</p>
 
                 
@@ -69,6 +70,8 @@ const displayBooks = books => {
        `;
 
         container.appendChild(div);
+
+    
     })
 }
 
