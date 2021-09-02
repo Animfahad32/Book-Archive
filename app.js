@@ -60,7 +60,7 @@ const displayBooks = books => {
             <div class="card-body">
                 <h5 class="card-title">${book.text[1]}</h5>
                 <p class="card-text">Author Name : ${book.author_name}</p>
-                <p class="card-text">Publisher Name : ${book.publisher.slice(0,1)}</p>
+                <p class="card-text">Publisher Name : ${book.publisher[0]}</p>
                 <p class="card-text">Publish Date : ${book.first_publish_year}</p>
 
                 
