@@ -1,6 +1,6 @@
 let searchInput = document.getElementById("searchInput") ;
 const searchBtn = document.getElementById("search-btn");
-const container = document.getElementById("country-container");
+const container = document.getElementById("book-container");
 
 
 
@@ -44,7 +44,7 @@ const displayBooks = books => {
     books.docs.forEach(book => {
       
       const div =  document.createElement('div');
-      div.classList.add('col-lg-3');
+      div.classList.add('col-md-3');
 
       let cover_i = book.cover_i;
       let img = `http://covers.openlibrary.org/b/id/${book.cover_i }-M.jpg`;
